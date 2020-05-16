@@ -1,0 +1,13 @@
+node_modules
+back/db/index.js
+back/public/bundle.js.map
+back/public/bundle.js
+back/.DS_Store
+	back/public/.DS_Store
+	back/public/src/.DS_Store
+back/public/src/img
+front/package-lock.json
+back/package-lock.json
+back/package.json
+.DS_Store
+back/.env.development
