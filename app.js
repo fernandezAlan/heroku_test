@@ -81,7 +81,7 @@ app.use(fileUpload());
 
 //servimos el index
 app.use("/*", function(req, res, next) {
-  res.sendFile(__dirname + "./public/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 db.sync({ force: false }).then(function() {
