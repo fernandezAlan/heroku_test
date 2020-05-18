@@ -1,5 +1,5 @@
 module.exports = {
-  mode:  process.env.NODE_ENV||"development",
+  mode:  process.env.NODE_ENV||"production",
   entry: "./front/index.js",
   output: {
     filename: "bundle.js",
