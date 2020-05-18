@@ -13,7 +13,7 @@ import AdminUsersContainer from "../containers/AdminUsersContainer";
 import CarritoContainer from "../containers/CarritoContainer";
 import CheckoutContainer from "../containers/CheckoutContainer";
 import EditDataContainer from "../containers/EditDataContainer"
-import "../../back/public/global.css";
+import "../../public/global.css";
 import AdminPoroductsContainer from '../containers/AdminProductsContainer'
 import Admin from '../components/Admin'
 import checkoutDigitalContainer from "../containers/CheckoutDigitalContainer"

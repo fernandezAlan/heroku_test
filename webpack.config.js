@@ -1,12 +1,17 @@
 module.exports = {
-  mode: "production",
+  mode:  process.env.NODE_ENV||"development",
   entry: "./front/index.js",
   output: {
     filename: "bundle.js",
-    path: __dirname + "./back/public"
+    path: __dirname + "public"
   },
   resolve: {
     extensions: [".js", ".jsx"]
+  },
+  performance: {
+    maxAssetSize: 200000,
+    maxEntrypointSize: 200000,
+    hints: false
   },
   context: __dirname,
   module: {

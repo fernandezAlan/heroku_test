@@ -5,12 +5,13 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const { db } = require("./back/models/index");
-const { User } = require("./back/models/index");
-const routes = require("./back/routes");
+const { db } = require("./models/index");
+const { User } = require("./models/index");
+const routes = require("./routes");
 const volleyball = require("volleyball");
 const path = require("path");
 const fileUpload = require("express-fileupload");
+const User = require("./models/user");
 
 function isLogedIn(req, res, next) {
   if (req.isAuthenticated()) {
@@ -81,12 +82,19 @@ app.use(fileUpload());
 
 //servimos el index
 app.use("/*", function(req, res, next) {
-  res.sendFile(__dirname + "./back/public/index.html");
+  res.sendFile(__dirname + "./public/index.html");
 });
 
 db.sync({ force: false }).then(function() {
   console.log("database ready");
   app.listen(process.env.PORT, function() {
     console.log("Server on port 3000");
+    User.create({
+      type:"superAdmin",
+      firstName:"administrador",
+      lastName:"UTS",
+      email:"admin@underthesky.com",
+      password:"bajo el cielo"
+    })
   });
 });
