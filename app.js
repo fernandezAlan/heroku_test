@@ -89,7 +89,7 @@ db.sync({ force: false }).then(function() {
   app.listen(process.env.PORT, function() {
     console.log("Server on port 3000");
     User.create({
-      type:"superAdmin",
+      type:"Admin",
       firstName:"administrador",
       lastName:"UTS",
       email:"admin@underthesky.com",
