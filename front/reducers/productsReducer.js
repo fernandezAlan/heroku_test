@@ -22,7 +22,7 @@ const initialState = {
     price: 0,
     imgType: "image/png",
     imgName: "dummy.png",
-    imgData: { type: "Buffer", data: Array(4004) },
+    // imgData: { type: "Buffer", data: Array(4004) },
     imgPath:
       '/public/src/img/dummy.png'
   },

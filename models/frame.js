@@ -19,7 +19,7 @@ Frame.init(
     },
     imgData: {
       type: Sequelize.BLOB("long"),
-      allowNull: false,
+      allowNull: true,
 
     },
     imgPath: {

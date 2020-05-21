@@ -80,7 +80,7 @@ router.post("/newFrame", upload.single("frameImg"), function (req, res) {
     price: framePrice,
     imgName: req.file.originalname,
     imgType: req.file.mimetype,
-    imgData: fs.readFileSync(req.file.path),
+    // imgData: fs.readFileSync(req.file.path),
     imgPath: "/" + req.file.path,
   }).then((resolve) => {
     console.log(resolve);
@@ -142,7 +142,7 @@ router.put("/editFrame/:id", upload.single("styleImg"), function (req, res) {
   let price = req.body.framePrice ? req.body.framePrice.toLowerCase() : undefined;
   let imgName = req.file ? req.file.originalname : undefined;
   let imgType = req.file ? req.file.mimetype : undefined;
-  let imgData = req.file ? fs.readFileSync(req.file.path) : undefined;
+  // let imgData = req.file ? fs.readFileSync(req.file.path) : undefined;
   let imgPath = req.file ? "/" + req.file.path : undefined;
   let id = req.params.id;
   Frame.update(
@@ -220,7 +220,7 @@ router.put("/editStyle/:style", upload.single("styleImg"), function (req, res) {
     : undefined;
   let imgName = req.file ? req.file.originalname : undefined;
   let imgType = req.file ? req.file.mimetype : undefined;
-  let imgData = req.file ? fs.readFileSync(req.file.path) : undefined;
+  // let imgData = req.file ? fs.readFileSync(req.file.path) : undefined;
   let imgPath = req.file ? "/" + req.file.path : undefined;
   let id = req.params.style;
   Style.update(
@@ -231,7 +231,7 @@ router.put("/editStyle/:style", upload.single("styleImg"), function (req, res) {
       signo,
       imgName,
       imgType,
-      imgData,
+      // imgData,
       imgPath,
     },
     {

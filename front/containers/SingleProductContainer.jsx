@@ -47,7 +47,7 @@ class SingleProductContainer extends React.Component {
         price: 0,
         imgType: "image/png",
         imgName: "dummy.png",
-        imgData: { type: "Buffer", data: Array(4004) },
+        // imgData: { type: "Buffer", data: Array(4004) },
         imgPath: "/public/src/img/dummy.png",
       },
       selectedSize: {
@@ -101,7 +101,7 @@ class SingleProductContainer extends React.Component {
       price: 0,
       imgType: "image/png",
       imgName: "dummy.png",
-      imgData: { type: "Buffer", data: Array(4004) },
+      // imgData: { type: "Buffer", data: Array(4004) },
       imgPath: "/public/src/img/dummy.png",
     });
     // this.setState({
@@ -117,7 +117,7 @@ class SingleProductContainer extends React.Component {
         price: 0,
         imgType: "image/png",
         imgName: "dummy.png",
-        imgData: { type: "Buffer", data: Array(4004) },
+        // imgData: { type: "Buffer", data: Array(4004) },
         imgPath: "/public/src/img/dummy.png",
       },
       selectedSize: size,
@@ -146,7 +146,7 @@ class SingleProductContainer extends React.Component {
         price: 0,
         imgType: "image/png",
         imgName: "dummy.png",
-        imgData: { type: "Buffer", data: Array(4004) },
+        // imgData: { type: "Buffer", data: Array(4004) },
         imgPath: "/public/src/img/dummy.png",
       });
     } else {
