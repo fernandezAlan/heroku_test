@@ -196,8 +196,8 @@ router.post("/newStyle", upload.single("styleImg"), function (req, res) {
     tipografia,
     imgName: req.file.originalname,
     imgType: req.file.mimetype,
-    imgData: fs.readFileSync(req.file.path),
-    imgPath: req.file.path,
+    imgData: fs.readFileSync(req.file.location),
+    imgPath: req.file.location,
   }).then(function (resolve) {
     console.log(resolve);
     res.sendStatus(200);
