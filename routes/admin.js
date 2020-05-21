@@ -74,6 +74,7 @@ router.post("/newFrame", upload.single("frameImg"), function (req, res) {
 
   let name = req.body.frame;
   let framePrice = parseInt(req.body.framePrice);
+  
   Frame.create({
     name,
     price: framePrice,
@@ -196,7 +197,7 @@ router.post("/newStyle", upload.single("styleImg"), function (req, res) {
     imgName: req.file.originalname,
     imgType: req.file.mimetype,
     imgData: fs.readFileSync(req.file.path),
-    imgPath: "/" + req.file.path,
+    imgPath: req.file.path,
   }).then(function (resolve) {
     console.log(resolve);
     res.sendStatus(200);
