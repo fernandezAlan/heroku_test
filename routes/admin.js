@@ -10,8 +10,21 @@ require ('dotenv').config({
   path:`.env.${NODE_ENV}`
 })
 
-
+const aws = require('aws-sdk'); // ^2.2.41
+const bodyParser = require('body-parser');
+const multerS3 = require('multer-s3'); //"^1.4.1"
 const multer = require("multer");
+
+aws.config.update({
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  region: 'us-east-1'
+});
+
+const s3 = new aws.S3()
+
+router.use(bodyParser.json());
+
 
 const storage = multer.diskStorage({
   destination: "public/src/img/probuilder/",
@@ -21,7 +34,18 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({
+  storage: multerS3({
+      s3: s3,
+      bucket: process.env.S3_BUCKET_NAME,
+      key: function (req, file, cb) {
+          console.log(file);
+          cb(null, file.originalname); //use Date.now() for unique file keys
+      }
+  })
+});
+
+// const upload = multer({ storage: storage });
 
 const Frame = require("../models/frame");
 const Size = require("../models/size");
