@@ -52,7 +52,7 @@ export default ({
                       <Card.Img
                         fluid
                         variant="top"
-                        src={frame.imgPath.toString().split("/public")[1]}
+                        src={frame.imgPath}
                       />
                       <p>{frame.name}</p>
                     </Row>
@@ -150,7 +150,7 @@ export default ({
                 <Card style={{ margin: '1.5rem', maxWidth: '10rem' }} className="tarjetaproducto">
                   <Card.Img
                     variant="top"
-                    src={style.imgPath.toString().split("/public")[1]}
+                    src={style.imgPath}
                   />
                   <Card.Body>
 

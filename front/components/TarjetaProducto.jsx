@@ -14,7 +14,7 @@ const TarjetaProducto = function ({ styleProduc, handleClick }) {
   const botonSelecc = {
     fontSize: "0.7rem",
   };
-const imgurl = styleProduc.imgPath.toString().split("/public")[1]
+const imgurl = styleProduc.imgPath
 
   return (
     <div>

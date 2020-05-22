@@ -79,7 +79,7 @@ export default ({
   };
 
   const imgurlPoster = selectedStyle.imgPath
-    ? selectedStyle.imgPath.toString().split("/public")[1]
+    ? selectedStyle.imgPath
     : null;
 
  

@@ -50,7 +50,7 @@ export default ({
           return f.id === e.styleId;
         });
         let imgurl = selectedStyle[0]
-          ? selectedStyle[0].imgPath.toString().split("/public")[1]
+          ? selectedStyle[0].imgPath
           : null;
 
         let selectedFrame = Frames.filter((fr) => {
