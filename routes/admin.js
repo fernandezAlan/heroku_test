@@ -26,13 +26,13 @@ const s3 = new aws.S3()
 router.use(bodyParser.json());
 
 
-const storage = multer.diskStorage({
-  destination: "public/src/img/probuilder/",
-  filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + "-" + file.originalname;
-    cb(null, file.fieldname + "-" + uniqueSuffix);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: "public/src/img/probuilder/",
+//   filename: function (req, file, cb) {
+//     const uniqueSuffix = Date.now() + "-" + file.originalname;
+//     cb(null, file.fieldname + "-" + uniqueSuffix);
+//   },
+// });
 
 const upload = multer({
   storage: multerS3({
@@ -40,7 +40,7 @@ const upload = multer({
       bucket: process.env.S3_BUCKET_NAME,
       key: function (req, file, cb) {
           console.log(file);
-          cb(null, file.originalname); //use Date.now() for unique file keys
+          cb(null, 'assets/'+file.originalname); //use Date.now() for unique file keys
       }
   })
 });
