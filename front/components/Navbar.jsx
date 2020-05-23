@@ -31,7 +31,7 @@ export default ({
     height: "245px",
     marginTop: "27px",
     display: "none",
-    position: "absolute",
+    position: "fixed",
     backgroundColor: "#eae9e8",
     boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
     padding: "12px 16px",

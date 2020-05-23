@@ -100,7 +100,7 @@ export default ({
           <Form.Label>Lugar del Evento</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Buenos Aires, Argentina"
+            placeholder="Lugar especial"
             onChange={handleChange}
             name="content"
             value={state.content}

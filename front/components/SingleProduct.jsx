@@ -82,6 +82,8 @@ export default ({
     ? selectedStyle.imgPath
     : null;
 
+  console.log(imgurlPoster);
+  
  
   return (
     <div style={singleStyle}>
@@ -110,7 +112,7 @@ export default ({
                   borderColor: "rgba(0,0,0,0)",
                 }}
                 variant="top"
-                src={selectedFrame.imgPath.slice(7)}
+                src={selectedFrame.imgPath}
               />
 
               {!imgurlPoster ? (

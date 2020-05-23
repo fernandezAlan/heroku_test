@@ -96,7 +96,7 @@ router.post("/login", function (req, res, next) {
         return next(loginErr);
       }
 
-      emailLogin(req.user.email, req.user.firstName);
+      // emailLogin(req.user.email, req.user.firstName);
 
       return res.send(req.user);
     });
