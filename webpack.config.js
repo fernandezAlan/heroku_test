@@ -3,7 +3,7 @@ module.exports = {
   entry: "./front/index.js",
   output: {
     filename: "bundle.js",
-    path: __dirname + "public"
+    path: __dirname + "/public"
   },
   resolve: {
     extensions: [".js", ".jsx"]
