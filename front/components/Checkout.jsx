@@ -16,7 +16,7 @@ export default ({
   lastNameUser
 }) => {
   const formStyle = {
-    width: "35rem",
+    width: "15rem",
     display:'flex',
     flexWrap:'wrap',
     justifyContent:'center',
