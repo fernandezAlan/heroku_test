@@ -348,7 +348,7 @@ export default ({
         >
           {typeof getPrice() !== "number" ||
           selectedSize.price === 0 ||
-          (!digital && selectedFrame.price === 0) ? (
+          (!digital && selectedFrame.name === 'frameless') ? (
             <span>
               <Button
                 className="boton-solido "

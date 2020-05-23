@@ -42,7 +42,7 @@ export default () => {
       {'    '}
       {'    '}
       </a>
-      <a target="_blank" href='https://api.whatsapp.com/send?phone=5491164180402'>
+      <a target="_blank" href='https://api.whatsapp.com/send?phone=5491126593782&text=Hola,%20UnderTheSky!%20'>
       <FontAwesomeIcon icon={faWhatsapp}  />
       
 
