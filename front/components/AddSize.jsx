@@ -58,8 +58,7 @@ export default ({ handleChange, handleSizeSubmit }) => {
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>Tipo</Form.Label>
             <Form.Control as="select" name="sizeType" onChange={handleChange}>
-            <option>Selecciona</option>
-
+              <option>Selecciona</option>
               <option>digital</option>
               <option>impreso</option>
             </Form.Control>
