@@ -57,7 +57,7 @@ export default ({
           return fr.name === e.frame;
         });
         let imgFrameUrl = selectedFrame[0]
-          ? selectedFrame[0].imgPath.slice(7)
+          ? selectedFrame[0].imgPath
           : null;
        
         quantity = e.quantity;

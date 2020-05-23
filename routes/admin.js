@@ -81,7 +81,7 @@ router.post("/newFrame", upload.single("frameImg"), function (req, res) {
     imgName: req.file.originalname,
     imgType: req.file.mimetype,
     // imgData: fs.readFileSync(req.file.path),
-    imgPath: "/" + req.file.path,
+    imgPath: req.file.location,
   }).then((resolve) => {
     console.log(resolve);
     res.redirect(200, "/addproducts");
@@ -143,7 +143,7 @@ router.put("/editFrame/:id", upload.single("styleImg"), function (req, res) {
   let imgName = req.file ? req.file.originalname : undefined;
   let imgType = req.file ? req.file.mimetype : undefined;
   // let imgData = req.file ? fs.readFileSync(req.file.path) : undefined;
-  let imgPath = req.file ? "/" + req.file.path : undefined;
+  let imgPath = req.file ? req.file.location : undefined;
   let id = req.params.id;
   Frame.update(
     {
@@ -221,7 +221,7 @@ router.put("/editStyle/:style", upload.single("styleImg"), function (req, res) {
   let imgName = req.file ? req.file.originalname : undefined;
   let imgType = req.file ? req.file.mimetype : undefined;
   // let imgData = req.file ? fs.readFileSync(req.file.path) : undefined;
-  let imgPath = req.file ? "/" + req.file.path : undefined;
+  let imgPath = req.file ? req.file.location : undefined;
   let id = req.params.style;
   Style.update(
     {

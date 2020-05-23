@@ -85,7 +85,7 @@ app.use("/*", function(req, res, next) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-db.sync({ force: process.env.FORCE_DB }).then(function() {
+db.sync({ force: false }).then(function() {
   console.log("database ready");
   app.listen(process.env.PORT, function() {
     console.log("Server on port 3000");
