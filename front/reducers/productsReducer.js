@@ -7,9 +7,8 @@ import {
   SELECT_SIZE,
   ALL_STYLES,
   DIGITAL,
-  ALL_FRAMES
+  ALL_FRAMES,
 } from "../constans";
-
 
 const initialState = {
   selectedProduct: {},
@@ -23,13 +22,12 @@ const initialState = {
     imgType: "image/png",
     imgName: "dummy.png",
     // imgData: { type: "Buffer", data: Array(4004) },
-    imgPath:
-      '/public/src/img/dummy.png'
+    imgPath: "/src/img/dummy.png",
   },
   selectedSize: {},
   allStyles: [],
   allFrames: [],
-  digital: false
+  digital: false,
 };
 
 export default (state = initialState, action) => {
@@ -49,9 +47,9 @@ export default (state = initialState, action) => {
     case SELECT_FRAME:
       return Object.assign({}, state, { selectedFrame: action.selectedFrame });
     case SELECT_SIZE:
-      return Object.assign({}, state, { selectedSize: action.selectedSize })
+      return Object.assign({}, state, { selectedSize: action.selectedSize });
     case DIGITAL:
-      return Object.assign({}, state, { digital: action.digital })
+      return Object.assign({}, state, { digital: action.digital });
     default:
       return state;
   }

@@ -128,7 +128,7 @@ export default ({
                     borderRadius: "0.2rem",
                     borderColor: "rgba(0,0,0,0)",
                     backgroundColor: "rgba(255,251,254,0)",
-                    padding: "0.6rem",
+                    padding: "0.4rem",
                   }}
                   variant="top"
                   src={imgurlPoster}

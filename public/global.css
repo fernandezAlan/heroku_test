@@ -19,6 +19,9 @@
 .headroom{
   z-index: 2!important;
 }
+.headroom-wrapper{
+  height: auto!important;
+}
 
 /* NODEMAILER */
 

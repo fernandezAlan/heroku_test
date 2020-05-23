@@ -48,7 +48,7 @@ class SingleProductContainer extends React.Component {
         imgType: "image/png",
         imgName: "dummy.png",
         // imgData: { type: "Buffer", data: Array(4004) },
-        imgPath: "/public/src/img/dummy.png",
+        imgPath: "/src/img/dummy.png",
       },
       selectedSize: {
         id: 0,
@@ -91,7 +91,6 @@ class SingleProductContainer extends React.Component {
       selectedSize: size,
     });
     localStorage.setItem("selectedSize", JSON.stringify(size));
-    
   }
   handleDigital(frame, size) {
     this.props.selectSize(size);
@@ -102,7 +101,7 @@ class SingleProductContainer extends React.Component {
       imgType: "image/png",
       imgName: "dummy.png",
       // imgData: { type: "Buffer", data: Array(4004) },
-      imgPath: "/public/src/img/dummy.png",
+      imgPath: "/src/img/dummy.png",
     });
     // this.setState({
     //   selectedFrame: frame,
@@ -118,12 +117,11 @@ class SingleProductContainer extends React.Component {
         imgType: "image/png",
         imgName: "dummy.png",
         // imgData: { type: "Buffer", data: Array(4004) },
-        imgPath: "/public/src/img/dummy.png",
+        imgPath: "/src/img/dummy.png",
       },
       selectedSize: size,
     });
   }
-
 
   handleClick(e) {
     e.preventDefault();
@@ -135,9 +133,8 @@ class SingleProductContainer extends React.Component {
       "selectedSize",
       JSON.stringify(this.state.selectedSize)
     );
-   
-    
-    this.props.selectSize(this.state.selectedSize)
+
+    this.props.selectSize(this.state.selectedSize);
     this.props.selectedDigital(this.state.digital);
     if (this.state.digital) {
       this.props.selectFrame({
@@ -147,14 +144,13 @@ class SingleProductContainer extends React.Component {
         imgType: "image/png",
         imgName: "dummy.png",
         // imgData: { type: "Buffer", data: Array(4004) },
-        imgPath: "/public/src/img/dummy.png",
+        imgPath: "/src/img/dummy.png",
       });
     } else {
       this.props.selectFrame(JSON.parse(localStorage.getItem("selectedFrame")));
     }
     this.props.nextStep();
   }
-
 
   scrollUp() {
     window.scrollTo({
